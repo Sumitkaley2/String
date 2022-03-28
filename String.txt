@@ -1,0 +1,45 @@
+package Eighteen;
+
+public class Upper_lower {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s="abcd";
+		String s1=s.toUpperCase();
+		System.out.println(s1);
+        String s2=myToUpperCase(s);
+        System.out.println(s2);
+       String s3=s.toLowerCase();
+        System.out.println(s3);
+		String s4=myToLowerCase(s);
+		System.out.println(s4);
+	}
+	private static String myToLowerCase(String s)
+	{
+	char[] ca =s.toCharArray();
+	for(int i=0;i<ca.length;i++)
+		if(ca[i]>='A' && ca[i]<='Z')
+			ca[i]=(char)(ca[i]+32);
+	return new String(ca);
+	}
+	
+	private static String myToUpperCase(String s)
+	{
+	char[] ca=s.toCharArray();
+	for(int i=0;i<ca.length;i++)
+	{
+	if(ca[i]>='a'  &&  ca[i]<='z')
+	{
+	int num=ca[i];
+	int num2=num-32;
+	char ch=(char)num2;
+	ca[i]=ch;
+	}
+	}
+	String s1=new String(ca);
+	return s1;
+		
+	}
+
+}
